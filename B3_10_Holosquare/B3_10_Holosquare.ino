@@ -70,7 +70,7 @@ void loop(void) {
         direction = 90.;
         break;
       case 3: // Move backward
-        direction = -180.;
+        direction = 180.;
         break;
       case 4: // Move left
         direction = -90.;
@@ -121,8 +121,8 @@ void loop(void) {
          We can use a trinary operator to set direction within run call
       */
       motorBack-> run((backPower  > 0) ? FORWARD : BACKWARD );
-      motorLeft-> run((leftPower  > 0) ? FORWARD : BACKWARD );
-      motorRight->run((rightPower > 0) ? FORWARD : BACKWARD );
+      motorLeft-> run((leftPower  > 0) ? BACKWARD : FORWARD );
+      motorRight->run((rightPower > 0) ? BACKWARD : FORWARD );
 
       //Print out motor control details
       Serial.print("Speeds Back,Left,Right = ");
