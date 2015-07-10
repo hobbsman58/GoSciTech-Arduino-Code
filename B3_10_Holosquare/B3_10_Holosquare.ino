@@ -70,7 +70,7 @@ void loop(void) {
         direction = 90.;
         break;
       case 3: // Move backward
-        direction = 180.;
+        direction = -180.;
         break;
       case 4: // Move left
         direction = -90.;
